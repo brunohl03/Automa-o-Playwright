@@ -4,6 +4,9 @@ Este projeto tem como objetivo realizar testes automatizados na plataforma DemoQ
 
 Estrutura do projeto:
 
+## Estrutura do Projeto
+
+```bash
 automation-project/
 ├── features/
 │   └── login.feature
