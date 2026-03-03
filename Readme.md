@@ -1,80 +1,62 @@
 # Projeto de Automação - DemoQA
 
-Este projeto tem como objetivo realizar testes automatizados na plataforma DemoQA utilizando:
+Este projeto tem como objetivo realizar testes automatizados na plataforma DemoQA utilizando Python, Playwright, Pytest e BDD (Gherkin). O foco é automatizar cenários funcionais da aplicação para validar comportamentos da interface, fluxos de usuário e interações com elementos da página. A aplicação utilizada para testes é: https://demoqa.com/
 
-- Python
-- Playwright
-- Pytest
-- BDD (Gherkin)
-
-## Objetivo
-
-Automatizar cenários funcionais da aplicação DemoQA para validar comportamentos da interface, fluxos de usuário e interações com elementos da página.
-
-A aplicação utilizada para testes é:
-https://demoqa.com/
-
-## Estrutura do Projeto
+Estrutura do projeto:
 
 automation-project/
-│
-├── features/         # Cenários escritos em Gherkin
-├── tests/            # Implementação dos steps
-├── pages/            # Page Object Model
-├── utils/            # Funções auxiliares
-├── screenshots/      # Prints em caso de falha
-├── reports/          # Relatórios de execução
-├── conftest.py       # Configuração global e fixtures
-├── pytest.ini        # Configuração do pytest
-├── requirements.txt  # Dependências do projeto
+├── features/
+│   └── login.feature
+├── tests/
+│   └── steps/
+│       └── test_login_steps.py
+├── pages/
+│   └── login_page.py
+├── utils/
+│   ├── helpers.py
+│   └── data_generator.py
+├── screenshots/
+├── reports/
+├── conftest.py
+├── pytest.ini
+├── requirements.txt
 ├── .gitignore
 └── README.md
 
-## Configuração do Ambiente
+O projeto segue o padrão Page Object Model, com separação de cenários BDD, implementação de steps, utilitários auxiliares, evidências de falha e relatórios de execução.
 
-### Criar e ativar ambiente virtual
+Para configurar o ambiente, crie um ambiente virtual com o comando:
 
-python -m venv venv  
-Cria um ambiente virtual para o projeto.
+python -m venv venv
 
-venv\Scripts\activate  
-Ativa o ambiente virtual e isola as bibliotecas do projeto.
+Ative o ambiente virtual:
 
-## Dependências (requirements.txt)
+venv\Scripts\activate
 
-playwright  
-Biblioteca de automação de navegador.
+As dependências estão definidas no arquivo requirements.txt: playwright (automação de navegador), pytest (framework de testes), pytest-playwright (integração Playwright + Pytest), allure-pytest (geração de relatórios), pytest-bdd (suporte à linguagem Gherkin).
 
-pytest  
-Framework para execução de testes.
+Instale as dependências:
 
-pytest-playwright  
-Integração do Playwright com o Pytest.
+pip install -r requirements.txt
 
-allure-pytest  
-Integração do Allure para geração de relatórios.
+Instale os navegadores do Playwright:
 
-pytest-bdd  
-Adiciona suporte à linguagem BDD (Gherkin).
+playwright install
 
-## Instalação das Dependências
+Para executar os testes:
 
-pip install -r requirements.txt  
-Instala todas as dependências do projeto.
+pytest
 
-playwright install  
-Instala os navegadores usados pelo Playwright.
+Para executar exibindo o navegador e logs detalhados:
 
-## Execução dos Testes
+pytest --headed -v
 
-pytest  
-Executa os testes.
+Para executar gerando resultados para o Allure:
 
-pytest --headed -v  
-Executa os testes abrindo o navegador e exibindo logs detalhados.
+pytest --alluredir=allure-results --headed -v
 
-pytest --alluredir=allure-results --headed -v  
-Executa os testes e gera os resultados para o relatório Allure.
+Para abrir o relatório interativo:
 
-allure serve allure-results  
-Gera e abre o relatório interativo do Allure.
+allure serve allure-results
+
+Projeto desenvolvido para fins de estudo e prática profissional em automação de testes.
