@@ -25,41 +25,42 @@ automation-project/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 
 O projeto segue o padrão Page Object Model, com separação de cenários BDD, implementação de steps, utilitários auxiliares, evidências de falha e relatórios de execução.
 
 Para configurar o ambiente, crie um ambiente virtual com o comando:
-
+```bash
 python -m venv venv
-
+```
 Ative o ambiente virtual:
-
+```bash
 venv\Scripts\activate
-
+```
 As dependências estão definidas no arquivo requirements.txt: playwright (automação de navegador), pytest (framework de testes), pytest-playwright (integração Playwright + Pytest), allure-pytest (geração de relatórios), pytest-bdd (suporte à linguagem Gherkin).
 
 Instale as dependências:
-
+```bash
 pip install -r requirements.txt
-
+```
 Instale os navegadores do Playwright:
-
+```bash
 playwright install
-
+```
 Para executar os testes:
-
+```bash
 pytest
-
+```
 Para executar exibindo o navegador e logs detalhados:
-
+```bash
 pytest --headed -v
-
+```
 Para executar gerando resultados para o Allure:
-
+```bash
 pytest --alluredir=allure-results --headed -v
-
+```
 Para abrir o relatório interativo:
-
+```bash
 allure serve allure-results
-
+```
 Projeto desenvolvido para fins de estudo e prática profissional em automação de testes.
