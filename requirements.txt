@@ -1,0 +1,5 @@
+playwright #→ Biblioteca de automação de navegador.
+pytest #→ Framework para execução de testes.
+pytest-playwright #→ Integração do Playwright com o Pytest.
+allure-pytest #→ Integração do Allure para geração de relatórios.
+pytest-bdd #→ Adiciona suporte à linguagem BDD ao teste

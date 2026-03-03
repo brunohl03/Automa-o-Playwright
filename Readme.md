@@ -11,15 +11,12 @@ automation-project/
 ├── features/
 │   └── login.feature
 ├── tests/
-│   └── steps/
-│       └── test_login_steps.py
+│   └── test_login_steps.py
 ├── pages/
 │   └── login_page.py
 ├── utils/
 │   ├── helpers.py
 │   └── data_generator.py
-├── screenshots/
-├── reports/
 ├── conftest.py
 ├── pytest.ini
 ├── requirements.txt
