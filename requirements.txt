@@ -11,4 +11,5 @@ faker #→ Biblioteca para geração de dados falsos, útil para testes.
 requirements.txt:
 -Lista todas as dependências do projeto Python para que o ambiente de testes
 possa ser configurado facilmente.
+
 """
