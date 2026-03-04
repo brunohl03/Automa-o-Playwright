@@ -8,16 +8,7 @@ pytest-xdist #→ Permite a execução de testes em paralelo.
 faker #→ Biblioteca para geração de dados falsos, útil para testes.
 
 """
-requirements.txt
-
-Lista todas as dependências do projeto Python para que o ambiente de testes
+requirements.txt:
+-Lista todas as dependências do projeto Python para que o ambiente de testes
 possa ser configurado facilmente.
-
-Comandos relacionados:
-
-pip install -r requirements.txt
-     Instala todas as bibliotecas listadas no requirements.txt.
-
-playwright install
-     Instala os navegadores necessários para o Playwright.
 """
