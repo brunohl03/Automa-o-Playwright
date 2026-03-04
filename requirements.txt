@@ -1,6 +1,6 @@
 # requirements.txt
 # Lista todas as dependências do projeto Python para que o ambiente de testes
-# possa ser configurado facilmente.
+# possa ser configurado facilmente...
 
 
 playwright #→ Biblioteca de automação de navegador.
