@@ -9,11 +9,11 @@ Estrutura do projeto:
 ```bash
 automation-project/
 ├── features/
-│   └── login.feature
+│   └── .feature
 ├── tests/
-│   └── test_login_steps.py
+│   └── _steps.py
 ├── pages/
-│   └── login_page.py
+│   └── page.py
 ├── utils/
 │   ├── helpers.py
 │   └── data_generator.py
