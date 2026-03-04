@@ -1,3 +1,8 @@
+# requirements.txt
+# Lista todas as dependências do projeto Python para que o ambiente de testes
+# possa ser configurado facilmente.
+
+
 playwright #→ Biblioteca de automação de navegador.
 pytest #→ Framework para execução de testes.
 pytest-playwright #→ Integração do Playwright com o Pytest.
@@ -6,10 +11,3 @@ pytest-bdd #→ Adiciona suporte à linguagem BDD ao teste
 pytest-rerunfailures #→ Permite reexecutar testes que falharam.]
 pytest-xdist #→ Permite a execução de testes em paralelo.
 faker #→ Biblioteca para geração de dados falsos, útil para testes.
-
-"""
-requirements.txt:
--Lista todas as dependências do projeto Python para que o ambiente de testes
-possa ser configurado facilmente.
-
-"""

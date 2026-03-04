@@ -15,4 +15,5 @@ Objetivos principais:
 
 Exemplo de uso: fixtures que retornam um usuário fake, que já podem ser injetadas diretamente
 nos testes.
+
 """

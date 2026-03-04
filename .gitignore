@@ -1,1 +1,6 @@
-venv/
+
+# Arquivo que indica ao Git quais arquivos ou pastas não devem ser versionados.
+# Evita que arquivos temporários, ambientes virtuais ou dados sensíveis
+# sejam enviados ao repositório.
+
+venv/  # Ignora a pasta do ambiente virtual
