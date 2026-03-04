@@ -52,10 +52,6 @@ Para executar exibindo o navegador e logs detalhados:
 ```bash
 pytest --headed -v
 ```
-Para executar gerando resultados para o Allure:
-```bash
-pytest --alluredir=allure-results --headed -v
-```
 Para abrir o relatório interativo:
 ```bash
 allure serve allure-results
