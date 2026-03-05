@@ -17,3 +17,10 @@ Exemplo de uso: fixtures que retornam um usuário fake, que já podem ser injeta
 nos testes.
 
 """
+
+from pytest_bdd import given
+
+@given('que o usuário acessa a página "https://demoqa.com/"')
+def acessar_home(page):
+    page.goto("https://demoqa.com/")
+    page.evaluate("document.body.style.zoom='50%'")
