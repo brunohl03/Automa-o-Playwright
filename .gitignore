@@ -4,3 +4,7 @@
 # sejam enviados ao repositório.
 
 venv/  
+allure-results/
+__pycache__/
+.pytest_cache/
+
