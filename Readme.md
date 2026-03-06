@@ -7,16 +7,29 @@ Estrutura do projeto:
 ## Estrutura do Projeto
 
 ```bash
-automation-project/
+PLAYWRIGHT/
+│
 ├── features/
-│   └── .feature
+│   ├── elements.feature
+│   └── __init__.py
+│
 ├── tests/
-│   └── _steps.py
+│   ├── elements_test.py
+│   └── __init__.py
+│
+├── steps/
+│   ├── elements_steps.py
+│   └── __init__.py
+│
 ├── pages/
-│   └── page.py
+│   ├── elements_page.py
+│   └── __init__.py
+│
 ├── utils/
 │   ├── helpers.py
-│   └── data_generator.py
+│   ├── data_generator.py
+│   └── __init__.py
+│
 ├── conftest.py
 ├── pytest.ini
 ├── requirements.txt
