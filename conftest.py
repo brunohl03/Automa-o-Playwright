@@ -18,9 +18,10 @@ nos testes.
 
 """
 
+# conftest.py
 from pytest_bdd import given
 
-@given('que o usuário acessa a página "https://demoqa.com/"')
+@given("que o usuário acessa a página inicial")
 def acessar_home(page):
     page.goto("https://demoqa.com/")
     page.evaluate("document.body.style.zoom='50%'")

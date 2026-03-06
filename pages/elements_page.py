@@ -1,13 +1,10 @@
 from playwright.sync_api import expect
 
-
 def clicar_elements(page):
-    page.get_by_role("link", name="Elements").click()
-
+    page.get_by_text("Elements").click()
 
 def abrir_text_box(page):
-    page.get_by_role("link", name="Text Box").click()
-
+    page.get_by_text("Text Box").click()
 
 def preencher_formulario(page):
     page.get_by_role("textbox", name="Full Name").fill("Bruno Lima")
@@ -17,7 +14,6 @@ def preencher_formulario(page):
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
-
 
 def validar_dados(page):
     expect(page.get_by_text("Name:Bruno Lima")).to_be_visible()
