@@ -67,7 +67,7 @@ pytest
 ```
 Para executar exibindo o navegador e logs detalhados:
 ```bash
-pytest --headed -v
+pytest --headed
 ```
 Para abrir o relatório interativo:
 ```bash
