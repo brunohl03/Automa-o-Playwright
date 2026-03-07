@@ -76,7 +76,3 @@ allure serve allure-results
 Projeto desenvolvido para fins de estudo e prática profissional em automação de testes.
 
 Desenvolvido por Bruno Lima.
-
-
-
-teste testetetetetetetetete
