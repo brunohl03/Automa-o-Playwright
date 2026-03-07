@@ -7,7 +7,7 @@ Estrutura do projeto:
 ## Estrutura do Projeto
 
 ```bash
-automation-project/
+Automa-o-Playwright/
 │
 ├── features/
 │   ├── elements.feature
