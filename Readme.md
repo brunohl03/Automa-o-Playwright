@@ -7,7 +7,7 @@ Estrutura do projeto:
 ## Estrutura do Projeto
 
 ```bash
-PLAYWRIGHT/
+automation-project/
 │
 ├── features/
 │   ├── elements.feature
@@ -28,6 +28,10 @@ PLAYWRIGHT/
 ├── utils/
 │   ├── helpers.py
 │   ├── data_generator.py
+│   └── __init__.py
+│
+├── config/
+│   ├── settings.py
 │   └── __init__.py
 │
 ├── conftest.py
