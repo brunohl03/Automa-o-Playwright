@@ -20,8 +20,10 @@ nos testes.
 
 # conftest.py
 from pytest_bdd import given
+from config.settings import BASE_URL, DEFAULT_ZOOM
+
 
 @given("que o usuário acessa a página inicial")
 def acessar_home(page):
-    page.goto("https://demoqa.com/")
-    page.evaluate("document.body.style.zoom='50%'")
+    page.goto(BASE_URL)
+    page.evaluate(f"document.body.style.zoom='{DEFAULT_ZOOM}'")
