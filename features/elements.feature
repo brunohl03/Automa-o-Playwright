@@ -1,5 +1,5 @@
 # language: pt
-Funcionalidade: Preencher formulário Text Box
+Funcionalidade: interagir com elementos
 
   Cenário: Usuário preenche formulário
     Dado que o usuário acessa a página inicial
