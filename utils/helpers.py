@@ -8,3 +8,8 @@ validar textos ou estados da página, manipular dados antes de enviar a formulá
 Objetivo: reduzir repetição de código, organizar ações comuns e tornar os testes
 mais legíveis e fáceis de manter.
 """
+import allure
+
+def tirar_print(page, nome):
+    print = page.screenshot(path=f"screenshots/{nome}.png")
+    allure.attach(print, name=nome, attachment_type=allure.attachment_type.PNG)

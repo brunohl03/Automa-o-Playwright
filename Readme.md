@@ -11,18 +11,22 @@ Automa-o-Playwright/
 │
 ├── features/
 │   ├── elements.feature
+│   ├── check_box.feature
 │   └── __init__.py
 │
 ├── tests/
 │   ├── elements_test.py
+│   ├── check_box_test.py
 │   └── __init__.py
 │
 ├── steps/
 │   ├── elements_steps.py
+│   ├── check_box_steps.py
 │   └── __init__.py
 │
 ├── pages/
 │   ├── elements_page.py
+│   ├── check_box_page.py
 │   └── __init__.py
 │
 ├── utils/
