@@ -11,5 +11,5 @@ mais legíveis e fáceis de manter.
 import allure
 
 def tirar_print(page, nome):
-    print = page.screenshot(path=f"screenshots/{nome}.png")
+    print = page.screenshot(path=f"utils/screenshots/{nome}.png")
     allure.attach(print, name=nome, attachment_type=allure.attachment_type.PNG)
