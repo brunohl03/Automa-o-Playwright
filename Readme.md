@@ -33,7 +33,7 @@ Automa-o-Playwright/
 │   ├── helpers.py
 │   ├── data_generator.py
 │   └── __init__.py
-│
+│   └── screenshots
 ├── config/
 │   ├── settings.py
 │   └── __init__.py
