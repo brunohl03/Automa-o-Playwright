@@ -8,3 +8,4 @@ allure-results/
 __pycache__/
 .pytest_cache/
 utils/screenshots/*
+!utils/screenshots/.gitkeep
