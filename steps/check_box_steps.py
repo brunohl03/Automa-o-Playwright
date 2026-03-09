@@ -1,5 +1,5 @@
 from pytest_bdd import when, then
-from pages.check_box_pages import clicar_elements, abrir_check_box, expandir_home, validar_check_box
+from pages.check_box_page import clicar_elements, abrir_check_box, expandir_home, validar_check_box
 from utils.helpers import tirar_print
 
 @when('ele clica na opção Elements')

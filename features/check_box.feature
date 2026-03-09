@@ -1,5 +1,4 @@
 # language: pt
-
 Funcionalidade: interagir com elementos
 
   Cenário: Usuario faz checkin na pasta home
