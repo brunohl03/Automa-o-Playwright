@@ -9,6 +9,10 @@ Estrutura do projeto:
 ```bash
 Automa-o-Playwright/
 │
+├── .github/
+│   └── workflows/
+│       └── CI.yml
+│
 ├── features/
 │   ├── elements.feature
 │   ├── check_box.feature
