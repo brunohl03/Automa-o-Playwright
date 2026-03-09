@@ -7,26 +7,39 @@ on:
     branches: [ main ]
 
 jobs:
-  tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositório
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Instalar Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      - name: Instalar dependências
+      - name: Install dependencies
         run: |
           pip install -r requirements.txt
-
-      - name: Instalar navegadores do Playwright
-        run: |
           playwright install --with-deps
 
-      - name: Executar testes
+      - name: Run tests
         run: |
-          pytest
+          pytest --alluredir=allure-results
+
+      - name: Install Allure
+        run: |
+          sudo apt-add-repository ppa:qameta/allure
+          sudo apt-get update
+          sudo apt-get install allure
+
+      - name: Generate Allure Report
+        run: |
+          allure generate allure-results --clean -o allure-report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
