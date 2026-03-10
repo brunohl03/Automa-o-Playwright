@@ -142,3 +142,86 @@ def clicar_previous(page):
 
 def validar_penultima_pagina(page):
     expect(page.get_by_text("Page 4 of 5")).to_be_visible()
+
+
+ #  Cenário: validar botão last
+def clicar_elements(page):
+    page.get_by_text("Elements").click()
+
+def abrir_web_tables(page):
+    page.get_by_text("Web Tables").click()
+
+def clicar_add(page):
+    page.get_by_role("button", name="Add").click()
+
+def add_novo_usuario(page):
+    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
+    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
+    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
+    page.get_by_role("textbox", name="Age").fill(IDADE)
+    page.get_by_role("textbox", name="Salary").fill(SALARIO)
+    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+
+def clicar_submit(page):
+    page.get_by_role("button", name="Submit").click()
+
+def clicar_last(page):
+    page.get_by_role("button", name="Last").click()
+
+def validar_ultima_pagina(page):
+    expect(page.get_by_text("Page 5 of 5")).to_be_visible()
+
+
+ #  Cenário: validar botão first
+def clicar_elements(page):
+    page.get_by_text("Elements").click()
+
+def abrir_web_tables(page):
+    page.get_by_text("Web Tables").click()
+
+def clicar_add(page):
+    page.get_by_role("button", name="Add").click()
+
+def add_novo_usuario(page):
+    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
+    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
+    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
+    page.get_by_role("textbox", name="Age").fill(IDADE)
+    page.get_by_role("textbox", name="Salary").fill(SALARIO)
+    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+
+def clicar_submit(page):
+    page.get_by_role("button", name="Submit").click()
+
+def clicar_last(page):
+    page.get_by_role("button", name="Last").click()
+
+def clicar_first(page):
+    page.get_by_role("button", name="First").click()
+
+def validar_primeira_pagina(page):
+    expect(page.get_by_text("Page 1 of 5")).to_be_visible()
+
+
+#   Cenário: validar show 10
+def clicar_elements(page):
+    page.get_by_text("Elements").click()
+
+def abrir_web_tables(page):
+    page.get_by_text("Web Tables").click()
+
+def clicar_add(page):
+    page.get_by_role("button", name="Add").click()
+
+def add_novo_usuario(page):
+    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
+    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
+    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
+    page.get_by_role("textbox", name="Age").fill(IDADE)
+    page.get_by_role("textbox", name="Salary").fill(SALARIO)
+    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+
+def clicar_submit(page):
+    page.get_by_role("button", name="Submit").click()
+    E selecionar Show 10 no dropdown
+    Então deve conter somente 10 pessoas na tabela

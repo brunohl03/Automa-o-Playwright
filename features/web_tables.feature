@@ -63,7 +63,7 @@ Funcionalidade: interagir com elementos
     Quando ele clica na opção Elements
     E acessa a seção web tables
     E add 47 pessoas na tabela
-    E clicar no botão first
+    E clicar no botão last depois first
     Então deve ser exibida a primeira página da tabela
 
 
