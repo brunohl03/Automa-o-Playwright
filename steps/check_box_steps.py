@@ -7,7 +7,6 @@ def step_clicar_elements(page):
     clicar_elements(page)
     tirar_print(page, "ele clica na opção Elements")
     
-
 @when('acessa a seção Check Box')
 def step_abrir_check_box(page):
     abrir_check_box(page)

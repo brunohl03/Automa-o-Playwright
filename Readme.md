@@ -18,6 +18,7 @@ Automa-o-Playwright/
 │   ├── check_box.feature
 │   ├── radio_button.feature
 │   ├── web_tables.feature
+│   ├── buttons.feature
 │   └── __init__.py
 │
 ├── pages/
@@ -25,6 +26,7 @@ Automa-o-Playwright/
 │   ├── check_box_page.py
 │   ├── radio_button_page.py
 │   ├── web_tables_page.py
+│   ├── buttons_page.py
 │   └── __init__.py
 │
 ├── steps/
@@ -32,6 +34,7 @@ Automa-o-Playwright/
 │   ├── check_box_steps.py
 │   ├── radio_button_steps.py
 │   ├── web_tables_steps.py
+│   ├── buttons_steps.py
 │   └── __init__.py
 │
 ├── tests/
@@ -39,6 +42,7 @@ Automa-o-Playwright/
 │   ├── check_box_test.py
 │   ├── radio_button_test.py
 │   ├── web_tables_test.py
+│   ├── buttons_test.py
 │   └── __init__.py
 │
 ├── utils/
