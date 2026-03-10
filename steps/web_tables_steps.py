@@ -1,6 +1,6 @@
 from pytest_bdd import when, then
 from config.settings import DEPARTAMENTO
-from pages.web_tables_page import clicar_first, validar_primeira_pagina, validar_ultima_pagina, abrir_web_tables, abrir_web_tables, add_novo_usuario, button_edit, clicar_add, clicar_elements, clicar_submit, editar_cierra, excluir_dados_tabela, excluir_dados_tabela, pesquisar_tabela, validar_add_novo_usuario, validar_dados_tabela, validar_edit, validar_exclusao_tabela, validar_exclusao_tabela, validar_numero_linhas, validar_numero_linhas, clicar_last, clicar_next, clicar_previous, validar_penultima_pagina     
+from pages.web_tables_page import clicar_first, selecionar_show_10, clicar_first, selecionar_show_10, selecionar_show_20, selecionar_show_30, selecionar_show_30, selecionar_show_40, selecionar_show_50, validar_linhas_10, validar_linhas_20, validar_linhas_30, validar_linhas_40, validar_linhas_50, validar_primeira_pagina, validar_ultima_pagina, abrir_web_tables, abrir_web_tables, add_novo_usuario, button_edit, clicar_add, clicar_elements, clicar_submit, editar_cierra, excluir_dados_tabela, excluir_dados_tabela, pesquisar_tabela, validar_add_novo_usuario, validar_dados_tabela, validar_edit, validar_exclusao_tabela, validar_exclusao_tabela, validar_numero_linhas, validar_numero_linhas, clicar_last, clicar_next, clicar_previous, validar_penultima_pagina     
 from utils.helpers import tirar_print
 
 #  Cenário: pesquisar dados na tabela
@@ -238,3 +238,164 @@ def step_clicar_last_depois_first(page):
 def step_validar_primeira_pagina(page):
     validar_primeira_pagina(page)
     tirar_print(page, "deve ser exibida a primeira página da tabela")
+
+
+#   Cenário: validar show 10
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when ('add 47 pessoas na tabela')
+def step_add_47_pessoas(page):
+    for _ in range(47):
+        clicar_add(page)
+        add_novo_usuario(page)
+        clicar_submit(page)
+
+    tirar_print(page, "add 47 pessoas na tabela")
+
+@when ('selecionar Show 10 no dropdown')
+def step_selecionar_show_10(page):
+    selecionar_show_20(page)
+    tirar_print(page, "selecionar Show 20 no dropdown")
+    selecionar_show_10(page)
+    tirar_print(page, "selecionar Show 10 no dropdown")
+
+@then ('deve conter somente 10 pessoas na tabela')
+def step_validar_show_10(page):
+    validar_linhas_10(page)
+    tirar_print(page, "deve conter somente 10 pessoas na tabela")
+
+
+#   Cenário: validar show 20
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when ('add 47 pessoas na tabela')
+def step_add_47_pessoas(page):
+    for _ in range(47):
+        clicar_add(page)
+        add_novo_usuario(page)
+        clicar_submit(page)
+
+    tirar_print(page, "add 47 pessoas na tabela")
+
+@when ('selecionar Show 20 no dropdown')
+def step_selecionar_show_20(page):
+    selecionar_show_20(page)
+    tirar_print(page, "selecionar Show 20 no dropdown")
+
+
+@then ('deve conter somente 20 pessoas na tabela')
+def step_validar_show_20(page):
+    validar_linhas_20(page)
+    tirar_print(page, "deve conter somente 20 pessoas na tabela")
+
+
+#   Cenário: validar show 30
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when ('add 47 pessoas na tabela')
+def step_add_47_pessoas(page):
+    for _ in range(47):
+        clicar_add(page)
+        add_novo_usuario(page)
+        clicar_submit(page)
+
+    tirar_print(page, "add 47 pessoas na tabela")
+
+@when ('selecionar Show 30 no dropdown')
+def step_selecionar_show_30(page):
+    selecionar_show_30(page)
+    tirar_print(page, "selecionar Show 30 no dropdown")
+
+
+@then ('deve conter somente 30 pessoas na tabela')
+def step_validar_show_30(page):
+    validar_linhas_30(page)
+    tirar_print(page, "deve conter somente 30 pessoas na tabela")
+
+
+#   Cenário: validar show 40
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when ('add 47 pessoas na tabela')
+def step_add_47_pessoas(page):
+    for _ in range(47):
+        clicar_add(page)
+        add_novo_usuario(page)
+        clicar_submit(page)
+
+    tirar_print(page, "add 47 pessoas na tabela")
+
+@when ('selecionar Show 40 no dropdown')
+def step_selecionar_show_40(page):
+    selecionar_show_40(page)
+    tirar_print(page, "selecionar Show 40 no dropdown")
+
+
+@then ('deve conter somente 40 pessoas na tabela')
+def step_validar_show_40(page):
+    validar_linhas_40(page)
+    tirar_print(page, "deve conter somente 40 pessoas na tabela")
+
+
+#   Cenário: validar show 50
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when ('add 47 pessoas na tabela')
+def step_add_47_pessoas(page):
+    for _ in range(47):
+        clicar_add(page)
+        add_novo_usuario(page)
+        clicar_submit(page)
+
+    tirar_print(page, "add 47 pessoas na tabela")
+
+@when ('selecionar Show 50 no dropdown')
+def step_selecionar_show_50(page):
+    selecionar_show_50(page)
+    tirar_print(page, "selecionar Show 50 no dropdown")
+
+
+@then ('deve conter somente 50 pessoas na tabela')
+def step_validar_show_50(page):
+    validar_linhas_50(page)
+    tirar_print(page, "deve conter somente 50 pessoas na tabela")

@@ -223,5 +223,38 @@ def add_novo_usuario(page):
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
-    E selecionar Show 10 no dropdown
-    Então deve conter somente 10 pessoas na tabela
+
+def selecionar_show_10(page):
+    page.get_by_role("combobox").select_option("10")
+
+def selecionar_show_20(page):
+    page.get_by_role("combobox").select_option("20")
+
+def selecionar_show_30(page):
+    page.get_by_role("combobox").select_option("30")
+
+def selecionar_show_40(page):
+    page.get_by_role("combobox").select_option("40")
+
+def selecionar_show_50(page):
+    page.get_by_role("combobox").select_option("50")
+
+def validar_linhas_10(page):
+    linhas = page.get_by_role("row")
+    expect(linhas).to_have_count(11)
+
+def validar_linhas_20(page):
+    linhas = page.get_by_role("row")
+    expect(linhas).to_have_count(21)
+
+def validar_linhas_30(page):
+    linhas = page.get_by_role("row")
+    expect(linhas).to_have_count(31)
+
+def validar_linhas_40(page):
+    linhas = page.get_by_role("row")
+    expect(linhas).to_have_count(41)
+
+def validar_linhas_50(page):
+    linhas = page.get_by_role("row")
+    expect(linhas).to_have_count(51)
