@@ -105,6 +105,7 @@ O projeto possui integração contínua utilizando GitHub "Actions".
 
 O workflow está definido no arquivo: .github/workflows/CI.yml
 
+#
 .
 
 .
