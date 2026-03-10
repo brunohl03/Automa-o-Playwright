@@ -20,6 +20,8 @@ Funcionalidade: interagir com elementos
     Quando ele clica na opção Elements
     E acessa a seção web tables
     E clicar em edit na linha de cierra
+    E editar os dados
+    E clicar em submit
     Então linha de cierra deve ser editada na tabela
 
   Cenário: add pessoa na tabela
