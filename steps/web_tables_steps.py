@@ -1,5 +1,5 @@
 from pytest_bdd import when, then
-from pages.web_tables_page import abrir_web_tables, abrir_web_tables, button_edit, clicar_elements, clicar_submit, editar_cierra, excluir_dados_tabela, excluir_dados_tabela, pesquisar_tabela, validar_dados_tabela, validar_edit, validar_exclusao_tabela, validar_exclusao_tabela   
+from pages.web_tables_page import abrir_web_tables, abrir_web_tables, add_novo_usuario, button_edit, clicar_add, clicar_elements, clicar_submit, editar_cierra, excluir_dados_tabela, excluir_dados_tabela, pesquisar_tabela, validar_add_novo_usuario, validar_dados_tabela, validar_edit, validar_exclusao_tabela, validar_exclusao_tabela   
 from utils.helpers import tirar_print
 
 #  Cenário: pesquisar dados na tabela
@@ -76,3 +76,35 @@ def step_clicar_submit(page):
 def step_validar_edit(page):
     validar_edit(page)
     tirar_print(page, "linha de cierra deve ser editada na tabela")
+
+
+#  Cenário: add pessoa na tabela
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when('clicar em add')
+def step_clicar_add(page):
+    clicar_add(page)
+    tirar_print(page, "clicar em add")
+
+@when('preencher os dados')
+def step_add_novo_usuario(page):
+    add_novo_usuario(page)
+    tirar_print(page, "preencher os dados")
+
+@when('clicar em submit')
+def step_clicar_submit(page):
+    clicar_submit(page)
+    tirar_print(page, "clicar em submit")
+
+@then('novos dados devem ser adicionados na tabela')
+def step_validar_add_novo_usuario(page):
+    validar_add_novo_usuario(page)
+    tirar_print(page, "novos dados devem ser adicionados na tabela")
