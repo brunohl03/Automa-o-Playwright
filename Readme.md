@@ -17,24 +17,28 @@ Automa-o-Playwright/
 │   ├── elements.feature
 │   ├── check_box.feature
 │   ├── radio_button.feature
+│   ├── web_tables.feature
 │   └── __init__.py
 │
 ├── tests/
 │   ├── elements_test.py
 │   ├── check_box_test.py
 │   ├── radio_button_test.py
+│   ├── web_tables_test.py
 │   └── __init__.py
 │
 ├── steps/
 │   ├── elements_steps.py
 │   ├── check_box_steps.py
 │   ├── radio_button_steps.py
+│   ├── web_tables_steps.py
 │   └── __init__.py
 │
 ├── pages/
 │   ├── elements_page.py
 │   ├── check_box_page.py
 │   ├── radio_button_page.py
+│   ├── web_tables_page.py
 │   └── __init__.py
 │
 ├── utils/
