@@ -1,5 +1,6 @@
 from pytest_bdd import when, then
-from pages.web_tables_page import abrir_web_tables, abrir_web_tables, add_novo_usuario, button_edit, clicar_add, clicar_elements, clicar_submit, editar_cierra, excluir_dados_tabela, excluir_dados_tabela, pesquisar_tabela, validar_add_novo_usuario, validar_dados_tabela, validar_edit, validar_exclusao_tabela, validar_exclusao_tabela   
+from config.settings import DEPARTAMENTO
+from pages.web_tables_page import abrir_web_tables, abrir_web_tables, add_novo_usuario, button_edit, clicar_add, clicar_elements, clicar_submit, editar_cierra, excluir_dados_tabela, excluir_dados_tabela, pesquisar_tabela, validar_add_novo_usuario, validar_dados_tabela, validar_edit, validar_exclusao_tabela, validar_exclusao_tabela, validar_numero_linhas, validar_numero_linhas, clicar_last, clicar_next, clicar_previous, validar_penultima_pagina     
 from utils.helpers import tirar_print
 
 #  Cenário: pesquisar dados na tabela
@@ -108,3 +109,70 @@ def step_clicar_submit(page):
 def step_validar_add_novo_usuario(page):
     validar_add_novo_usuario(page)
     tirar_print(page, "novos dados devem ser adicionados na tabela")
+
+    
+#   Cenário: validar botão next
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when ('add 47 pessoas na tabela')
+def step_add_47_pessoas(page):
+    for _ in range(47):
+        clicar_add(page)
+        add_novo_usuario(page)
+        clicar_submit(page)
+
+    tirar_print(page, "add 47 pessoas na tabela")
+
+@when ('clicar no botão next')
+def step_clicar_next(page):
+    page.get_by_role("button", name="Next").click()
+    tirar_print(page, "clicar no botão next")
+
+@then ('deve ser exibida a próxima página da tabela')
+def step_validar_proxima_pagina(page):
+    validar_numero_linhas(page)
+    tirar_print(page, "deve ser exibida a próxima página da tabela")
+
+
+#  Cenário: validar botão previous
+@when('ele clica na opção Elements')
+def step_clicar_elements(page):
+    clicar_elements(page)
+    tirar_print(page, "ele clica na opção Elements")
+
+@when('acessa a seção web tables')
+def step_abrir_web_tables(page):
+    abrir_web_tables(page)
+    tirar_print(page, "acessa a seção web tables")
+
+@when ('add 47 pessoas na tabela')
+def step_add_47_pessoas(page):
+    for _ in range(47):
+        clicar_add(page)
+        add_novo_usuario(page)
+        clicar_submit(page)
+
+    tirar_print(page, "add 47 pessoas na tabela")
+
+@when ('clicar no botão last')
+def step_clicar_last(page):
+    clicar_last(page)
+    tirar_print(page, "clicar no botão last")
+
+@when ('clicar no botão previous')
+def step_clicar_previous(page):
+    clicar_previous(page)
+    tirar_print(page, "clicar no botão previous")
+
+@then ('deve ser exibida a penultima página da tabela')
+def step_validar_penultima_pagina(page):
+    validar_penultima_pagina(page)
+    tirar_print(page, "deve ser exibida a penultima página da tabela")
