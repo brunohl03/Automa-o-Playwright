@@ -90,6 +90,21 @@ Para abrir o relatório interativo:
 ```bash
 allure serve allure-results
 ```
-Projeto desenvolvido para fins de estudo e prática profissional em automação de testes.
+
+
+# Registro de Bugs
+
+Os bugs identificados durante a execução dos testes ou durante a análise da aplicação são registrados no próprio repositório do GitHub.
+
+Eles podem ser visualizados e acompanhados através da aba "Issues", onde são documentados com descrição do problema, passos para reprodução, evidências e informações do ambiente.
+
+
+# Integração Contínua (CI)
+
+O projeto possui integração contínua utilizando GitHub "Actions".
+
+O workflow está definido no arquivo: .github/workflows/CI.yml
+
+
 
 Desenvolvido por Bruno Lima.
