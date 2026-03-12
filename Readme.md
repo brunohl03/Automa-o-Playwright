@@ -16,7 +16,7 @@ Automa-o-Playwright/
 │       └── bug_report.md
 │
 ├── features/
-│   ├── elements.feature
+│   ├── text_box.feature
 │   ├── check_box.feature
 │   ├── radio_button.feature
 │   ├── web_tables.feature
@@ -25,7 +25,7 @@ Automa-o-Playwright/
 │   └── __init__.py
 │
 ├── pages/
-│   ├── elements_page.py
+│   ├── text_box_page.py
 │   ├── check_box_page.py
 │   ├── radio_button_page.py
 │   ├── web_tables_page.py
@@ -34,7 +34,7 @@ Automa-o-Playwright/
 │   └── __init__.py
 │
 ├── steps/
-│   ├── elements_steps.py
+│   ├── text_box_steps.py
 │   ├── check_box_steps.py
 │   ├── radio_button_steps.py
 │   ├── web_tables_steps.py
@@ -43,7 +43,7 @@ Automa-o-Playwright/
 │   └── __init__.py
 │
 ├── tests/
-│   ├── elements_test.py
+│   ├── text_box_test.py
 │   ├── check_box_test.py
 │   ├── radio_button_test.py
 │   ├── web_tables_test.py
