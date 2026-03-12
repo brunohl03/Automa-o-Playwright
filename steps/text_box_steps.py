@@ -1,5 +1,5 @@
 from pytest_bdd import when, then
-from pages.elements_page import clicar_elements, abrir_text_box, preencher_formulario, clicar_submit, validar_dados
+from pages.text_box_page import clicar_elements, abrir_text_box, preencher_formulario, clicar_submit, validar_dados
 from utils.helpers import tirar_print
 
 @when('ele clica na opção Elements')
