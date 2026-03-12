@@ -21,8 +21,7 @@ Automa-o-Playwright/
 │   ├── radio_button.feature
 │   ├── web_tables.feature
 │   ├── buttons.feature
-│   ├── links.feature
-│   └── __init__.py
+│   └── links.feature
 │
 ├── pages/
 │   ├── text_box_page.py
