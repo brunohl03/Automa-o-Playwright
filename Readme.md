@@ -10,8 +10,10 @@ Estrutura do projeto:
 Automa-o-Playwright/
 │
 ├── .github/
-│   └── workflows/
-│       └── CI.yml
+│   ├── workflows/
+│   │   └── CI.yml
+│   └── ISSUE_TEMPLATE/
+│       └── bug_report.md
 │
 ├── features/
 │   ├── elements.feature
@@ -37,7 +39,7 @@ Automa-o-Playwright/
 │   ├── radio_button_steps.py
 │   ├── web_tables_steps.py
 │   ├── buttons_steps.py
-│   ├── links_steps.py 
+│   ├── links_steps.py
 │   └── __init__.py
 │
 ├── tests/
@@ -46,7 +48,7 @@ Automa-o-Playwright/
 │   ├── radio_button_test.py
 │   ├── web_tables_test.py
 │   ├── buttons_test.py
-│   ├── links_test.py    
+│   ├── links_test.py
 │   └── __init__.py
 │
 ├── utils/
