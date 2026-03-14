@@ -21,7 +21,8 @@ Automa-o-Playwright/
 │   ├── radio_button.feature
 │   ├── web_tables.feature
 │   ├── buttons.feature
-│   └── links.feature
+│   ├── links.feature
+│   ├── broken_links.feature
 │
 ├── pages/
 │   ├── text_box_page.py
@@ -30,6 +31,7 @@ Automa-o-Playwright/
 │   ├── web_tables_page.py
 │   ├── buttons_page.py
 │   ├── links_page.py
+│   ├── broken_links_page.py
 │   └── __init__.py
 │
 ├── steps/
@@ -39,6 +41,7 @@ Automa-o-Playwright/
 │   ├── web_tables_steps.py
 │   ├── buttons_steps.py
 │   ├── links_steps.py
+│   ├── broken_links_steps.py
 │   └── __init__.py
 │
 ├── tests/
@@ -48,6 +51,7 @@ Automa-o-Playwright/
 │   ├── web_tables_test.py
 │   ├── buttons_test.py
 │   ├── links_test.py
+│   ├── broken_links_test.py
 │   └── __init__.py
 │
 ├── utils/
