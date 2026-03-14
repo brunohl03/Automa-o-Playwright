@@ -18,10 +18,11 @@ Funcionalidade: interagir com elementos
     Quando ele clica na opção Elements
     E acessa a seção Broken Links - Images
     E clica no link válido
-    Então a página vinculada ao link válido deve ser carregada corretamente.
+    Então a página vinculada ao link válido deve ser carregada corretamente
 
   Cenário: validar broken link
     Dado que o usuário acessa a página inicial
     Quando ele clica na opção Elements
+    E acessa a seção Broken Links - Images
     E clica no link invalido
-    Então a página vinculada ao link invalido deve exibir uma mensagem de erro ou não ser carregada corretamente.
+    Então a página vinculada ao link invalido deve exibir uma mensagem de erro ou não ser carregada corretamente

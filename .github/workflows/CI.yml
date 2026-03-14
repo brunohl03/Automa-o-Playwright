@@ -1,50 +1,29 @@
-name: Run Playwright Tests
-
+name: Demo QA automation tests
 on:
-  workflow_dispatch:
-    inputs:
-      user:
-        description: "Usuário do sistema"
-        required: true
-        default: "admin"
-
-      password:
-        description: "Senha do sistema"
-        required: true
-        default: "123456"
-
-      browser:
-        description: "Escolha o navegador"
-        required: true
-        type: choice
-        options:
-          - chromium
-          - firefox
-          - webkit
-        default: chromium
-
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
 jobs:
-  tests:
+  test:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
-
-    env:
-      USER: ${{ github.event.inputs.user }}
-      PASSWORD: ${{ github.event.inputs.password }}
-      NAVEGADOR: ${{ github.event.inputs.browser }}
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          playwright install
-
-      - name: Run tests
-        run: pytest
+    - uses: actions/checkout@v5
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.13'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Ensure browsers are installed
+      run: python -m playwright install --with-deps
+    - name: Run your tests
+      run: pytest --tracing=retain-on-failure
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-traces
+        path: test-results/

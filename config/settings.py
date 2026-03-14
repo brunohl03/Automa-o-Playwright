@@ -1,5 +1,7 @@
 # config/settings.py
 
+import os
+
 BASE_URL = "https://demoqa.com"
 DEFAULT_ZOOM = "50%"
 NOME_USUARIO = "BRUNO LIMA"
@@ -11,6 +13,3 @@ LAST_NAME = "LIMA"
 IDADE = "1"
 SALARIO = "1234"
 DEPARTAMENTO = "TI"
-USER = ""
-PASSWORD = ""
-NAVEGADOR = ""
