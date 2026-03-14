@@ -45,7 +45,7 @@ def clicar_created(page):
     page.get_by_role("link", name="Created").click()
 
 def validar_resposta_created(page):
-    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with staus 201 and status text Created")
+    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 201 and status text Created")
 
 
 #   Cenário: Usuário clica no link no content
@@ -59,7 +59,7 @@ def clicar_no_content(page):
     page.get_by_role("link", name="No Content").click()
 
 def validar_resposta_no_content(page):
-    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with staus 204 and status text No Content")
+    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 204 and status text No Content")
 
 
 #   Cenário: Usuário clica no link moved
@@ -73,7 +73,7 @@ def clicar_moved(page):
     page.get_by_role("link", name="Moved").click()
 
 def validar_resposta_moved(page):
-    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with staus 301 and status text Moved Permanently")
+    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 301 and status text Moved Permanently")
 
 
 #   Cenário: Usuário clica no link bad request
@@ -87,7 +87,7 @@ def clicar_bad_request(page):
     page.get_by_role("link", name="Bad Request").click()
 
 def validar_resposta_bad_request(page):
-   expect(page.locator("#linkResponse")).to_contain_text("Link has responded with staus 400 and status text Bad Request")
+   expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 400 and status text Bad Request")
 
 
 #   Cenário: Usuário clica no link unauthorized
@@ -101,7 +101,7 @@ def clicar_unauthorized(page):
     page.get_by_role("link", name="Unauthorized").click()
 
 def validar_resposta_unauthorized(page):    
-    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with staus 401 and status text Unauthorized")
+    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 401 and status text Unauthorized")
 
 
 #   Cenário: Usuário clica no link forbidden
@@ -115,7 +115,7 @@ def clicar_forbidden(page):
     page.get_by_role("link", name="Forbidden").click()
 
 def validar_resposta_forbidden(page):
-    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with staus 403 and status text Forbidden")
+    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 403 and status text Forbidden")
 
 
 #   Cenário: Usuário clica no link not found
@@ -129,4 +129,4 @@ def clicar_not_found(page):
     page.get_by_role("link", name="Not Found").click()
 
 def validar_resposta_not_found(page):
-    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with staus 404 and status text Not Found")
+    expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 404 and status text Not Found")

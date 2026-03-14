@@ -20,4 +20,4 @@ def validar_dados(page):
     expect(page.get_by_text("Name:" + NOME_USUARIO)).to_be_visible()
     expect(page.get_by_text("Email:" + EMAIL_USUARIO)).to_be_visible()
     expect(page.get_by_text("Current Address :" + CURRENT_ADDRESS)).to_be_visible()
-    expect(page.get_by_text("Permananet Address :" + PERMANENT_ADDRESS)).to_be_visible()
+    expect(page.get_by_text("Permananent Address :" + PERMANENT_ADDRESS)).to_be_visible()
