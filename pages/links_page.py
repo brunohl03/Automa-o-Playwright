@@ -48,6 +48,7 @@ def validar_resposta_created(page):
     expect(page.locator("#linkResponse")).to_contain_text("Link has responded with status 201 and status text Created")
 
 
+
 #   Cenário: Usuário clica no link no content
 def clicar_elements(page):
     page.get_by_text("Elements").click()
@@ -97,7 +98,7 @@ def clicar_elements(page):
 def abrir_links(page):
     page.get_by_text("Links", exact=True).click()
 
-def clicar_unauthorized(page):    
+def clicar_unauthorized(page):
     page.get_by_role("link", name="Unauthorized").click()
 
 def validar_resposta_unauthorized(page):    
