@@ -23,6 +23,8 @@ Automa-o-Playwright/
 │   ├── buttons.feature
 │   ├── links.feature
 │   ├── broken_links.feature
+│   ├── upload_download.feature
+│   └── dynamic_properties.feature
 │
 ├── pages/
 │   ├── text_box_page.py
@@ -32,6 +34,8 @@ Automa-o-Playwright/
 │   ├── buttons_page.py
 │   ├── links_page.py
 │   ├── broken_links_page.py
+│   ├── upload_download_page.py
+│   ├── dynamic_properties_page.py
 │   └── __init__.py
 │
 ├── steps/
@@ -42,6 +46,8 @@ Automa-o-Playwright/
 │   ├── buttons_steps.py
 │   ├── links_steps.py
 │   ├── broken_links_steps.py
+│   ├── upload_download_steps.py
+│   ├── dynamic_properties_steps.py
 │   └── __init__.py
 │
 ├── tests/
@@ -52,12 +58,15 @@ Automa-o-Playwright/
 │   ├── buttons_test.py
 │   ├── links_test.py
 │   ├── broken_links_test.py
+│   ├── upload_download_test.py
+│   ├── dynamic_properties_test.py
 │   └── __init__.py
 │
 ├── utils/
 │   ├── helpers.py
 │   ├── data_generator.py
 │   ├── screenshots/
+│   ├── upload_images/
 │   └── __init__.py
 │
 ├── config/
