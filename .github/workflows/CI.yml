@@ -38,29 +38,27 @@ jobs:
       env:
         BROWSER: ${{ github.event.inputs.browser }}
 
-    - name: 🧪 Run tests
+    - name: 🧪 Run tests and generate summary
       id: run_tests
       run: |
-        pytest -v --tb=short --maxfail=0 --junitxml=test-results/results.xml
+        # Roda os testes e salva o log
+        pytest -v --tb=short --maxfail=0 | tee test.log
+
+        # Conta quantos passaram e quantos falharam
+        PASSED=$(grep -c "PASSED" test.log || true)
+        FAILED=$(grep -c "FAILED" test.log || true)
+        TOTAL=$((PASSED + FAILED))
+
+        # Mostra resumo bonito
+        echo "=========================================="
+        echo "🧪 Test Summary"
+        echo "✅ Passed: $PASSED"
+        echo "❌ Failed: $FAILED"
+        echo "🕒 Total tests: $TOTAL"
+        echo "=========================================="
       continue-on-error: true
       env:
         BROWSER: ${{ github.event.inputs.browser }}
-
-    - name: 📝 Test summary
-      run: |
-        if [ -f test-results/results.xml ]; then
-          PASSED=$(grep -o 'status="passed"' test-results/results.xml | wc -l)
-          FAILED=$(grep -o 'status="failed"' test-results/results.xml | wc -l)
-          TOTAL=$((PASSED + FAILED))
-          echo "=========================================="
-          echo "🧪 Test Summary"
-          echo "✅ Passed: $PASSED"
-          echo "❌ Failed: $FAILED"
-          echo "🕒 Total tests: $TOTAL"
-          echo "=========================================="
-        else
-          echo "⚠️  Não foi possível gerar o resumo dos testes."
-        fi
 
     - name: 📁 Upload Playwright traces
       uses: actions/upload-artifact@v4
