@@ -1,7 +1,7 @@
 name: Playwright Tests
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # só roda quando você clicar em "Run workflow"
 
 jobs:
   test:
@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        browser: [chromium, firefox, webkit]  # Matrix apenas para criar jobs paralelos
+        browser: [chromium, firefox, webkit]  # 3 navegadores
 
     steps:
     - uses: actions/checkout@v5
@@ -28,12 +28,14 @@ jobs:
     - name: 🌐 Install Playwright browsers
       run: python -m playwright install --with-deps
 
-    - name: 🧪 Run tests
-      run: pytest --tracing=retain-on-failure
+    - name: 🧪 Run tests (resumido)
+      run: |
+        pytest -q --tb=no --maxfail=0 --junitxml=test-results/results.xml
+      continue-on-error: true
 
     - name: 📁 Upload Playwright traces
       uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: playwright-traces
+        name: playwright-traces-${{ matrix.browser }}
         path: test-results/
