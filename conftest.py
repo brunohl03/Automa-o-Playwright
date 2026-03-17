@@ -20,7 +20,18 @@ nos testes.
 
 # conftest.py
 from pytest_bdd import given
-from config.settings import BASE_URL, DEFAULT_ZOOM
+from config.settings import BASE_URL, DEFAULT_ZOOM, BROWSER
+import pytest
+from playwright.sync_api import sync_playwright
+
+
+@pytest.fixture
+def page():
+    with sync_playwright() as p:
+        browser = getattr(p, BROWSER).launch()
+        page = browser.new_page()
+        yield page
+        browser.close()
 
 
 @given("que o usuário acessa a página inicial")
