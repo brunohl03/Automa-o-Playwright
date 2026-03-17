@@ -1,8 +1,5 @@
 # config/settings.py
 
-import os
-
-BROWSER = os.getenv("BROWSER", "chromium")
 BASE_URL = "https://demoqa.com"
 DEFAULT_ZOOM = "50%"
 NOME_USUARIO = "BRUNO"
