@@ -1,12 +1,16 @@
 name: Playwright Tests
 
 on:
-  workflow_dispatch:   # <--- roda somente quando você clicar em "Run workflow" no GitHub
+  workflow_dispatch:
 
 jobs:
   test:
-    timeout-minutes: 60
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]  # Matrix apenas para criar jobs paralelos
 
     steps:
     - uses: actions/checkout@v5
@@ -21,10 +25,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: 🌐 Ensure browsers are installed
+    - name: 🌐 Install Playwright browsers
       run: python -m playwright install --with-deps
 
-    - name: 🧪 Run your tests
+    - name: 🧪 Run tests
       run: pytest --tracing=retain-on-failure
 
     - name: 📁 Upload Playwright traces
