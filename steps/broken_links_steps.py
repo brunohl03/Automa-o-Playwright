@@ -13,7 +13,7 @@ def step_abrir_buttons(page):
     abrir_buttons(page)
     tirar_print(page, "acessa a seção Broken Links - Images")
 
-@then('a imagem valida deve ser carregada corretamente')
+@then('a imagem valida deve ser carregada corretamente.')
 def step_validar_valid_image(page):
     validar_valid_image(page)
     tirar_print(page, "Então a imagem valida deve ser carregada corretamente.")

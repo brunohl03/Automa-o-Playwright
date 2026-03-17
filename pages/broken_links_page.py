@@ -1,4 +1,5 @@
 from playwright.sync_api import expect
+from pytest_playwright.pytest_playwright import page
 
 
 #   Cenário: validar valid image
@@ -9,7 +10,7 @@ def abrir_buttons(page):
     page.get_by_text("Broken Links - Images").click()
 
 def validar_valid_image(page):
-    expect(page.locator("img").nth(1)).to_be_visible()
+    expect(page.locator("img").nth(1)).not_to_have_js_property("naturalWidth", 0)
 
 
 
