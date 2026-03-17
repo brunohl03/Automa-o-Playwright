@@ -41,7 +41,8 @@ jobs:
     - name: 🧪 Run tests
       run: |
         mkdir -p test-results
-        pytest -v --maxfail=0 --tb=short --junitxml=test-results/results.xml
+        # Logs resumidos: sem traceback detalhado, apenas resultado de cada teste
+        pytest -q --tb=no --maxfail=0 --junitxml=test-results/results.xml
       continue-on-error: true
       env:
         BROWSER: ${{ github.event.inputs.browser }}
