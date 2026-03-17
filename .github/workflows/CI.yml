@@ -38,24 +38,10 @@ jobs:
       env:
         BROWSER: ${{ github.event.inputs.browser }}
 
-    - name: 🧪 Run tests and generate summary
-      id: run_tests
+    - name: 🧪 Run tests
       run: |
-        # Roda os testes e salva o log
-        pytest -v --tb=short --maxfail=0 | tee test.log
-
-        # Conta quantos passaram e quantos falharam
-        PASSED=$(grep -c "PASSED" test.log || true)
-        FAILED=$(grep -c "FAILED" test.log || true)
-        TOTAL=$((PASSED + FAILED))
-
-        # Mostra resumo bonito
-        echo "=========================================="
-        echo "🧪 Test Summary"
-        echo "✅ Passed: $PASSED"
-        echo "❌ Failed: $FAILED"
-        echo "🕒 Total tests: $TOTAL"
-        echo "=========================================="
+        mkdir -p test-results
+        pytest -v --maxfail=0 --tb=short --junitxml=test-results/results.xml
       continue-on-error: true
       env:
         BROWSER: ${{ github.event.inputs.browser }}
