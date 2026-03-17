@@ -40,10 +40,9 @@ jobs:
       env:
         BROWSER: ${{ github.event.inputs.browser }}
 
-    - name: 📊 Generate Allure Report (via Python)
+    - name: 📊 Generate Allure HTML report (via Python)
       run: |
-        pip install allure-commandline
-        allure generate allure-results -o allure-report --clean
+        python -m allure_pytest.cmdline generate allure-results -o allure-report --clean
 
     - name: 📁 Upload Allure Report
       uses: actions/upload-artifact@v4
