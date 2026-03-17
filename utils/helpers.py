@@ -13,3 +13,4 @@ import allure
 def tirar_print(page, nome):
     print = page.screenshot(path=f"utils/screenshots/{nome}.png")
     allure.attach(print, name=nome, attachment_type=allure.attachment_type.PNG)
+

@@ -1,5 +1,6 @@
 from playwright.sync_api import expect
-from config.settings import EMAIL_USUARIO, FIRST_NAME, LAST_NAME, IDADE, SALARIO, DEPARTAMENTO
+from utils.data_generator import primeiro_nome, sobrenome, email, idade, salario, departamento
+from utils.data_generator import gerar_dados
 
 #  Cenário: pesquisar dados na tabela
 def clicar_elements(page):
@@ -39,22 +40,22 @@ def button_edit(page):
     page.locator("#edit-record-1 > svg").click()
 
 def editar_cierra(page):
-    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
-    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
-    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
-    page.get_by_role("textbox", name="Age").fill(IDADE)
-    page.get_by_role("textbox", name="Salary").fill(SALARIO)
-    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+    page.get_by_role("textbox", name="First Name").fill(primeiro_nome)
+    page.get_by_role("textbox", name="Last Name").fill(sobrenome)
+    page.get_by_role("textbox", name="name@example.com").fill(email)
+    page.get_by_role("textbox", name="Age").fill(idade)
+    page.get_by_role("textbox", name="Salary").fill(salario)
+    page.get_by_role("textbox", name="Department").fill(departamento)
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
 
 def validar_edit(page):
-    expect(page.get_by_role("cell", name=FIRST_NAME, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=LAST_NAME, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=EMAIL_USUARIO, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=IDADE, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=DEPARTAMENTO, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=primeiro_nome, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=sobrenome, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=email, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=idade, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=departamento, exact=True)).to_be_visible()
 
 #   Cenário: add pessoa na tabela
 def clicar_elements(page):
@@ -66,23 +67,23 @@ def abrir_web_tables(page):
 def clicar_add(page):
     page.get_by_role("button", name="Add").click()
 
-def add_novo_usuario(page):
-    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
-    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
-    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
-    page.get_by_role("textbox", name="Age").fill(IDADE)
-    page.get_by_role("textbox", name="Salary").fill(SALARIO)
-    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+def adicionar_um_usuario(page):
+    page.get_by_role("textbox", name="First Name").fill(primeiro_nome)
+    page.get_by_role("textbox", name="Last Name").fill(sobrenome)
+    page.get_by_role("textbox", name="name@example.com").fill(email)
+    page.get_by_role("textbox", name="Age").fill(idade)
+    page.get_by_role("textbox", name="Salary").fill(salario)
+    page.get_by_role("textbox", name="Department").fill(departamento)
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
 
-def validar_add_novo_usuario(page):
-    expect(page.get_by_role("cell", name=FIRST_NAME, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=LAST_NAME, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=EMAIL_USUARIO, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=IDADE, exact=True)).to_be_visible()
-    expect(page.get_by_role("cell", name=DEPARTAMENTO, exact=True)).to_be_visible()
+def validar_adicionar_um_usuario(page):
+    expect(page.get_by_role("cell", name=primeiro_nome, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=sobrenome, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=email, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=idade, exact=True)).to_be_visible()
+    expect(page.get_by_role("cell", name=departamento, exact=True)).to_be_visible()
 
 
 #  Cenário: validar botão next
@@ -96,12 +97,13 @@ def clicar_add(page):
     page.get_by_role("button", name="Add").click()
 
 def add_novo_usuario(page):
-    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
-    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
-    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
-    page.get_by_role("textbox", name="Age").fill(IDADE)
-    page.get_by_role("textbox", name="Salary").fill(SALARIO)
-    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+    user = gerar_dados()
+    page.get_by_role("textbox", name="First Name").fill(user["primeiro_nome"])
+    page.get_by_role("textbox", name="Last Name").fill(user["sobrenome"])
+    page.get_by_role("textbox", name="name@example.com").fill(user["email"])
+    page.get_by_role("textbox", name="Age").fill(user["idade"])
+    page.get_by_role("textbox", name="Salary").fill(user["salario"])
+    page.get_by_role("textbox", name="Department").fill(user["departamento"])
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
@@ -124,12 +126,13 @@ def clicar_add(page):
     page.get_by_role("button", name="Add").click()
 
 def add_novo_usuario(page):
-    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
-    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
-    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
-    page.get_by_role("textbox", name="Age").fill(IDADE)
-    page.get_by_role("textbox", name="Salary").fill(SALARIO)
-    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+    user = gerar_dados()
+    page.get_by_role("textbox", name="First Name").fill(user["primeiro_nome"])
+    page.get_by_role("textbox", name="Last Name").fill(user["sobrenome"])
+    page.get_by_role("textbox", name="name@example.com").fill(user["email"])
+    page.get_by_role("textbox", name="Age").fill(user["idade"])
+    page.get_by_role("textbox", name="Salary").fill(user["salario"])
+    page.get_by_role("textbox", name="Department").fill(user["departamento"])
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
@@ -155,12 +158,13 @@ def clicar_add(page):
     page.get_by_role("button", name="Add").click()
 
 def add_novo_usuario(page):
-    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
-    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
-    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
-    page.get_by_role("textbox", name="Age").fill(IDADE)
-    page.get_by_role("textbox", name="Salary").fill(SALARIO)
-    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+    user = gerar_dados()
+    page.get_by_role("textbox", name="First Name").fill(user["primeiro_nome"])
+    page.get_by_role("textbox", name="Last Name").fill(user["sobrenome"])
+    page.get_by_role("textbox", name="name@example.com").fill(user["email"])
+    page.get_by_role("textbox", name="Age").fill(user["idade"])
+    page.get_by_role("textbox", name="Salary").fill(user["salario"])
+    page.get_by_role("textbox", name="Department").fill(user["departamento"])
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
@@ -183,12 +187,13 @@ def clicar_add(page):
     page.get_by_role("button", name="Add").click()
 
 def add_novo_usuario(page):
-    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
-    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
-    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
-    page.get_by_role("textbox", name="Age").fill(IDADE)
-    page.get_by_role("textbox", name="Salary").fill(SALARIO)
-    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+    user = gerar_dados()
+    page.get_by_role("textbox", name="First Name").fill(user["primeiro_nome"])
+    page.get_by_role("textbox", name="Last Name").fill(user["sobrenome"])
+    page.get_by_role("textbox", name="name@example.com").fill(user["email"])
+    page.get_by_role("textbox", name="Age").fill(user["idade"])
+    page.get_by_role("textbox", name="Salary").fill(user["salario"])
+    page.get_by_role("textbox", name="Department").fill(user["departamento"])
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
@@ -214,12 +219,13 @@ def clicar_add(page):
     page.get_by_role("button", name="Add").click()
 
 def add_novo_usuario(page):
-    page.get_by_role("textbox", name="First Name").fill(FIRST_NAME)
-    page.get_by_role("textbox", name="Last Name").fill(LAST_NAME)
-    page.get_by_role("textbox", name="name@example.com").fill(EMAIL_USUARIO)
-    page.get_by_role("textbox", name="Age").fill(IDADE)
-    page.get_by_role("textbox", name="Salary").fill(SALARIO)
-    page.get_by_role("textbox", name="Department").fill(DEPARTAMENTO)
+    user = gerar_dados()
+    page.get_by_role("textbox", name="First Name").fill(user["primeiro_nome"])
+    page.get_by_role("textbox", name="Last Name").fill(user["sobrenome"])
+    page.get_by_role("textbox", name="name@example.com").fill(user["email"])
+    page.get_by_role("textbox", name="Age").fill(user["idade"])
+    page.get_by_role("textbox", name="Salary").fill(user["salario"])
+    page.get_by_role("textbox", name="Department").fill(user["departamento"])
 
 def clicar_submit(page):
     page.get_by_role("button", name="Submit").click()
