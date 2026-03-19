@@ -80,6 +80,10 @@ Automa-o-Playwright/
 └── README.md
 ```
 
+## Documentação de Requisitos
+
+Foi criado o arquivo ```bash docs/requisitos.md ``` com o objetivo de documentar os requisitos funcionais e não funcionais da aba Elements da aplicação. Este documento serve como base para a definição dos cenários BDD e auxilia na rastreabilidade entre as regras de negócio e os testes automatizados implementados no projeto.
+
 O projeto segue o padrão Page Object Model, com separação de cenários BDD, implementação de steps, utilitários auxiliares, evidências de falha e relatórios de execução.
 
 Para configurar o ambiente, crie um ambiente virtual com o comando:
