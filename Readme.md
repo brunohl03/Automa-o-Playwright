@@ -76,6 +76,7 @@ Automa-o-Playwright/
 ├── conftest.py
 ├── pytest.ini
 ├── requirements.txt
+├── requisitos.md
 ├── .gitignore
 └── README.md
 ```
