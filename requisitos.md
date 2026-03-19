@@ -18,6 +18,8 @@ A aba Elements contempla funcionalidades relacionadas à interação com compone
 
 ## Requisitos Funcionais (RF)
 
+### Formulários (Text Box)
+
 **RF01 – Preenchimento de formulário**  
 O sistema deve permitir ao usuário inserir nome completo, e-mail, endereço atual e endereço permanente.
 
@@ -30,11 +32,23 @@ O sistema deve permitir o envio dos dados após o preenchimento dos campos obrig
 **RF04 – Exibição dos dados enviados**  
 O sistema deve exibir os dados submetidos após o envio do formulário.
 
+---
+
+### Checkboxes
+
 **RF05 – Seleção de checkbox**  
 O sistema deve permitir selecionar e desmarcar opções de checkbox.
 
+---
+
+### Radio Buttons
+
 **RF06 – Seleção de radio button**  
 O sistema deve permitir a seleção de apenas uma opção por vez entre as disponíveis.
+
+---
+
+### Botões
 
 **RF07 – Interação com botões**  
 O sistema deve responder corretamente às seguintes ações:
@@ -42,11 +56,19 @@ O sistema deve responder corretamente às seguintes ações:
 - Duplo clique  
 - Clique com botão direito  
 
+---
+
+### Upload e Download de arquivos
+
 **RF08 – Upload de arquivo**  
 O sistema deve permitir o envio de arquivos a partir do sistema local do usuário.
 
 **RF09 – Download de arquivo**  
 O sistema deve permitir o download de arquivos disponíveis na interface.
+
+---
+
+### Links
 
 **RF10 – Exibição de links**  
 O sistema deve exibir links interativos na seção de Links.
