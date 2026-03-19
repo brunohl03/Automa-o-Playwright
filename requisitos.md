@@ -13,6 +13,9 @@ A aba Elements contempla funcionalidades relacionadas à interação com compone
 - Links
 - Upload e Download de arquivos
 
+
+
+
 ## Requisitos Funcionais (RF)
 
 **RF01 – Preenchimento de formulário**  
