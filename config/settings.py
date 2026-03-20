@@ -1,9 +1,4 @@
 # config/settings.py
-import os
-
-# Lê o navegador da variável de ambiente BROWSER
-# Se não existir, usa 'chromium' como padrão
-BROWSER = os.getenv("BROWSER", "chromium")
 
 BASE_URL = "https://demoqa.com"
 DEFAULT_ZOOM = "50%"
