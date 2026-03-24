@@ -9,3 +9,4 @@ pytest-bdd #→ Adiciona suporte à linguagem BDD ao teste
 pytest-rerunfailures #→ Permite reexecutar testes que falharam.]
 pytest-xdist #→ Permite a execução de testes em paralelo.
 faker #→ Biblioteca para geração de dados falsos, útil para testes.
+locust #→ Ferramenta de teste de carga para simular múltiplos usuários.
