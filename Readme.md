@@ -152,7 +152,7 @@ Para abrir o relatório interativo:
 ```bash
 allure serve allure-results
 ```
-Para rodar o Locust e acessar o painel web:
+Para rodar o Locust e acessar o painel web (direcionar terminal para tests/API/locust):
 ```bash
 locust -f locustfile.py --host https://demoqa.com
 ```
