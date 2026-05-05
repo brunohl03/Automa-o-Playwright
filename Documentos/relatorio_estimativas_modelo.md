@@ -171,7 +171,11 @@ Resultado:
 
 * Estimativa final (E):
 * Desvio padrão (SD):
-* Intervalo estimado: (E - SD) até (E + SD)
+* Intervalo estimado: 
+
+$$
+E \pm SD
+$$
 
 ---
 
