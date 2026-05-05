@@ -167,15 +167,18 @@ $$
 SD = \frac{p - o}{6}
 $$
 
+Cálculo intervali estimado:
+
+$$
+E \pm SD
+$$
+
 Resultado:
 
 * Estimativa final (E):
 * Desvio padrão (SD):
 * Intervalo estimado: 
 
-$$
-E \pm SD
-$$
 
 ---
 
