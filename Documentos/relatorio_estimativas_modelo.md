@@ -154,11 +154,15 @@ Valores:
 * Estimativa pessimista (p):
 
 Cálculo da estimativa:
+
 $$
 E = \frac{o + 4m + p}{6}
 $$
 
+
+
 Cálculo do desvio padrão:
+
 $$
 SD = \frac{p - o}{6}
 $$
