@@ -157,6 +157,10 @@ Cálculo:
 
 E = (o + 4m + p) / 6
 
+$$
+E = \frac{o + 4m + p}{6}
+$$
+
 Desvio padrão:
 
 SD = (p - o) / 6
