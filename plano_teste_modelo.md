@@ -1,8 +1,8 @@
-# 📄 PLANO DE TESTE (MODELO)
+# PLANO DE TESTE (MODELO)
 
 ---
 
-## 1. 🧠 Contexto do Teste
+## 1. Contexto do Teste
 
 ### 1.1 Escopo
 
@@ -11,11 +11,11 @@ Descrever o que será testado:
 * Sistemas / módulos incluídos
 * Sistemas / módulos fora do escopo
 
-**Exemplo:**
+Exemplo:
 
-* ✔️ API de autenticação
-* ✔️ Interface de login
-* ❌ Módulo de pagamento
+* API de autenticação
+* Interface de login
+* Módulo de pagamento (fora do escopo)
 
 ---
 
@@ -50,7 +50,7 @@ Limitações conhecidas:
 
 ---
 
-## 2. ⚠️ Premissas e Restrições
+## 2. Premissas e Restrições
 
 ### 2.1 Premissas
 
@@ -72,7 +72,7 @@ Limitações que impactam o projeto:
 
 ---
 
-## 3. 👥 Stakeholders
+## 3. Stakeholders
 
 | Papel   | Nome | Responsabilidade        |
 | ------- | ---- | ----------------------- |
@@ -90,11 +90,11 @@ Limitações que impactam o projeto:
 
 ---
 
-## 4. 💬 Comunicação
+## 4. Comunicação
 
 ### 4.1 Formas de comunicação
 
-* Daily meetings
+* Reuniões diárias
 * Reuniões de alinhamento
 * Relatórios de teste
 
@@ -116,7 +116,7 @@ Limitações que impactam o projeto:
 
 ---
 
-## 5. ⚠️ Registro de Riscos
+## 5. Registro de Riscos
 
 ### 5.1 Riscos do Produto
 
@@ -134,7 +134,7 @@ Limitações que impactam o projeto:
 
 ---
 
-## 6. 🧪 Abordagem de Teste
+## 6. Abordagem de Teste
 
 ### 6.1 Níveis de Teste
 
@@ -157,7 +157,7 @@ Limitações que impactam o projeto:
 ### 6.3 Técnicas de Teste
 
 * Particionamento de equivalência
-* Valor de limite (BVA)
+* Análise de valor de limite (BVA)
 * Tabela de decisão
 * Transição de estado
 
@@ -182,8 +182,8 @@ Limitações que impactam o projeto:
 
 ### 6.6 Critérios de Saída
 
-* % de cobertura atingida
-* Bugs críticos resolvidos
+* Percentual de cobertura atingido
+* Defeitos críticos resolvidos
 * Testes executados
 
 ---
@@ -192,8 +192,8 @@ Limitações que impactam o projeto:
 
 Definir nível de independência:
 
-* Teste pelo próprio dev
-* Teste por equipe QA
+* Teste pelo próprio desenvolvedor
+* Teste por equipe de QA
 * Teste por equipe externa
 
 ---
@@ -208,7 +208,7 @@ Definir nível de independência:
 
 ### 6.9 Dados de Teste
 
-* Dados reais / mascarados
+* Dados reais mascarados
 * Dados fictícios
 * Massa de teste automatizada
 
@@ -231,7 +231,7 @@ Descrever exceções à política organizacional:
 
 ---
 
-## 7. 💰 Orçamento
+## 7. Orçamento
 
 | Item             | Custo estimado |
 | ---------------- | -------------- |
@@ -241,7 +241,7 @@ Descrever exceções à política organizacional:
 
 ---
 
-## 8. 📅 Cronograma
+## 8. Cronograma
 
 | Fase         | Início | Fim |
 | ------------ | ------ | --- |
@@ -251,7 +251,7 @@ Descrever exceções à política organizacional:
 
 ---
 
-# 🧩 Observações Finais
+## Observações Finais
 
 * Este plano deve ser revisado periodicamente
 * Pode ser ajustado conforme evolução do projeto
@@ -259,12 +259,10 @@ Descrever exceções à política organizacional:
 
 ---
 
-# ✅ Conclusão
+## Conclusão
 
 Este documento define:
 
 * como os testes serão conduzidos
 * quais recursos serão utilizados
 * como garantir qualidade e controle do projeto
-
----
