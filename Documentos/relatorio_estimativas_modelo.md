@@ -184,12 +184,12 @@ Resultado:
 
 ## 6. Consolidação das Estimativas
 
-| Técnica      | Esforço Estimado |
-| ------------ | ---------------- |
-| Índices      |                  |
-| Extrapolação |                  |
-| Delphi       |                  |
-| Três pontos  |                  |
+| Técnica               | Esforço Estimado |
+| ------------          | ---------------- |
+| Índices               |                  |
+| Extrapolação          |                  |
+| Wideband Delphi       |                  |
+| Três pontos           |                  |
 
 Estimativa final adotada:
 
