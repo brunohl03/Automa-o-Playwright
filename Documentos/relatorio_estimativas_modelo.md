@@ -153,21 +153,20 @@ Valores:
 * Estimativa mais provável (m):
 * Estimativa pessimista (p):
 
-Cálculo:
-
-E = (o + 4m + p) / 6
-
+Cálculo da estimativa:
 $$
 E = \frac{o + 4m + p}{6}
 $$
 
-Desvio padrão:
-
-SD = (p - o) / 6
+Cálculo do desvio padrão:
+$$
+SD = \frac{p - o}{6}
+$$
 
 Resultado:
 
 * Estimativa final (E):
+* Desvio padrão (SD):
 * Intervalo estimado: (E - SD) até (E + SD)
 
 ---
